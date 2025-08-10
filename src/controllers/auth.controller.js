@@ -46,7 +46,7 @@ const registerUser = asyncHandler(async (req, res) => {
                 token,
                 {
                     httpOnly: true,
-                    sameSite: "Strict",
+                    sameSite: "none",
                     secure: process.env.NODE_ENV !== "development",
                     maxAge: 1000 * 600 * 60 * 24 * 7 // 7 days in ms
                 }
