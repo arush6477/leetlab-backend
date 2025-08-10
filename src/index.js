@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(cookieParser())
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:["http://localhost:5173", "https://extraordinary-treacle-a1e9f1.netlify.app"],
     credentials:true
 }))
 
