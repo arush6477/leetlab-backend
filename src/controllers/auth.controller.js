@@ -108,7 +108,7 @@ const loginUser = asyncHandler(async (req, res) => {
                 token,
                 {
                     httpOnly: true,
-                    sameSite: "Strict",
+                    sameSite: "None",
                     secure: process.env.NODE_ENV !== "development",
                     maxAge: 1000 * 600 * 60 * 24 * 7 // 7 days in ms
                 }
