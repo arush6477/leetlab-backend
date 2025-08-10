@@ -141,7 +141,7 @@ const logOut = asyncHandler(async (req, res) => {
         res
             .clearCookie("jwt", {
                 httpOnly: true,
-                sameSite: "Strict",
+                sameSite: "None",
                 secure: process.env.NODE_ENV !== "development"
             })
             .json(new ApiResponse(204, null, "user logged out successfully"))
